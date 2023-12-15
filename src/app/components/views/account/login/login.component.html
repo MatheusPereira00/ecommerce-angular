@@ -1,0 +1,27 @@
+<div class="container">
+    <svg>
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+    </svg>
+    <h1>Acesse sua conta</h1>
+</div>
+
+<form [formGroup]="loginForm" (ngSubmit)="(onSubmit)">
+    <label>Email</label>
+    <input type="text" placeholder="insira seu email aqui" formControlName="email">
+    <app-custom-validation-message [controlContainer]="loginForm.get('email')!"
+        class="validators"></app-custom-validation-message>
+
+    <label>Senha</label>
+    <input type="text" placeholder="insira sua senha aqui" formControlName="senha">
+    <app-custom-validation-message [controlContainer]="loginForm.get('senha')!"
+        class="validators"></app-custom-validation-message>
+
+    <p>Esqueci a senha</p>
+
+    <button routerLink="/adm" (click)="onSubmit()">Login</button>
+
+    <p>Não tem uma conta ainda?</p>
+
+    <button routerLink="/account/create">Faça um cadastro</button>
+
+</form>

@@ -1,0 +1,13 @@
+<div class="container" *ngIf="tooglePopup">
+  <div class="container__sucess">
+    <p>Cadastro feito com sucesso</p>
+    <button (click)="closePopup()">X</button>
+  </div>
+</div>
+
+<div class="container" *ngIf="toogleError">
+  <div class="container__error">
+    <p>Cadastro com error</p>
+    <button (click)="closeError()">X</button>
+  </div>
+</div>

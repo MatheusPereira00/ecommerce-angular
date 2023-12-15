@@ -1,0 +1,364 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  
+  gap: 5rem;
+
+  margin-left: 23rem;
+  margin-top: 10rem;
+
+  
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+    border: 1px solid var(--primary-color);
+    
+    width: 115rem;
+    height: 20rem;
+    
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    
+    padding: 3rem;
+    background-color: var(--white-black);
+    
+    &--img {
+      display: flex;
+      justify-content: center;
+
+      width: 18rem;
+      height: 12rem;
+
+      background: var(--primary-color);
+      border-radius: 8px;
+
+      img {
+        width: 14rem;
+      }
+    }
+
+    &--dados {
+      display: flex;
+      flex-direction: column;
+
+      &__name {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+          color: var(--black-white);
+          font-weight: 700;
+          font-size: 1.8rem;
+          font-family: Roboto;
+          line-height: 3.6rem;
+        }
+
+        p {
+          color: var(--black-white);
+          font-size: 1.8rem;
+        }
+      }
+
+      &__price {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          font-size: 1.5rem;
+          color: var(--black-white);
+        }
+
+        h2 {
+          color: var(--black-white);
+        }
+      }
+    }
+
+    &--btn {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        width: 4rem;
+        height: 4rem;
+
+        border-radius: 8px;
+        border: 1px solid var(--matheus-shop-ref-primary-primary-40, #0052DD);
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+        background: var(--matheus-shop-ref-primary-primary-40, #0052DD);
+        color: var(--text-color);
+      }
+    }
+
+    &--total {
+      display: flex;
+      flex-direction: column;
+      color: var(--black-white);
+    }
+
+    &--excluir {
+      button {
+        width: 4rem;
+        height: 4rem;
+
+        border-radius: 8px;
+        border: 1px solid var(--matheus-shop-sys-light-error, #BA1A1A);
+        background: var(--matheus-shop-sys-light-error, #BA1A1A);
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: var(--black-white);
+      }
+    }
+  }
+
+  &__valorTotal {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: end;
+
+   &--price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    
+    color: var(--black-white);
+
+    h2 {
+      color: var(--text-blue-white);
+      font-size: 1.8rem;
+    }
+
+   }
+
+   button {
+    width: 8rem;
+    height: 4rem;
+
+    border-radius: 8px;
+    border: 1px solid var(--matheus-shop-ref-primary-primary-40, #0052DD);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+    background: var(--matheus-shop-ref-primary-primary-40, #0052DD);
+    color: var(--text-color);
+   }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .container {
+//   height: 100%;
+//   width: 100%;
+//   margin-left: 23rem;
+
+// }
+
+// h2 {
+//   color: blue;
+//   font-size: 35px;
+//   font-weight: 400;
+//   margin-top: 10px;
+// }
+// .container-main {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   padding: 1rem;
+//   height: 205px;
+//   width: 1140px;
+//   margin-top: 50px;
+// }
+
+// .div-image {
+//   width: 183.52px;
+//   height: 120.62px;
+//   //left: 352px;
+//   //top: 350px;
+//   background: #0052dd;
+//   border-radius: 8px;
+// }
+
+// img {
+//   height: 130px;
+//   padding-left: 12px;
+//   padding-bottom: 1rem;
+// }
+// .title-categoria {
+//   display: flex;
+//   gap: 8px;
+// }
+// .title {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 15px;
+//   color: #00174c;
+// }
+// .categoria {
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 15px;
+// }
+// .price {
+//   display: flex;
+//   align-items: center;
+//   gap: 1rem;
+//   margin-top: 1rem;
+// }
+// .txt-unit {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 15px;
+//   color: #757680;
+// }
+
+// .price-unit {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 15px;
+//   color: #3855c1;
+// }
+
+// .amount {
+//   color: #45464f;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 36px;
+//   .value {
+//     color: #3855c1;
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 15px;
+//   }
+// }
+
+// .buttons {
+//   display: flex;
+//   gap: 8px;
+// }
+
+// .btn-l {
+//   width: 40px;
+//   height: 36px;
+//   background: #0052dd;
+//   border: 1px solid #0052dd;
+//   color: #ffff;
+//   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+//   border-radius: 8px;
+// }
+// .btn-c {
+//   width: 40px;
+//   height: 36px;
+//   background: #b4c5ff;
+//   border: 1px solid #b4c5ff;
+//   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+//   border-radius: 8px;
+// }
+// .btn-r {
+//   width: 40px;
+//   height: 36px;
+//   background: #0052dd;
+//   border: 1px solid #0052dd;
+//   color: #ffff;
+//   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+//   border-radius: 8px;
+// }
+// .close {
+//   margin-bottom: 130px;
+//   margin-right: -12px;
+//   width: 30px;
+//   height: 36px;
+//   background: #ba1a1a;
+//   border: 1px solid #ba1a1a;
+//   color: #ffff;
+//   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+//   border-radius: 8px;
+// }
+
+// .div-total {
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: 80px;
+//   margin-bottom: 150px;
+//   position: relative;
+// }
+
+// .total-valor {
+//   display: flex;
+//   gap: 10px;
+//   align-items: center;
+//   justify-content: flex-end;
+//   margin-right: 2rem;
+// }
+
+// .div-btn {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-right: 2rem;
+// }
+// .paragrafo-total {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 36px;
+//   color: #45464f;
+// }
+
+// .total {
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 20px;
+//   line-height: 32px;
+//   color: #3855c1;
+// }
+// button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #0052dd;
+//   color: white;
+//   height: 30px;
+//   width: 75px;
+//   border-radius: 7px;
+//   border: none;
+// }

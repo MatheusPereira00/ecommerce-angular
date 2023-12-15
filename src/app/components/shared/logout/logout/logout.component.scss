@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-top: 10rem;
+    margin-left: 50rem;
+    gap: 1rem;
+
+    svg {
+        fill: var(--primary-color);
+    }
+
+    p {
+        color: var(--primary-color);
+        text-align: center;
+        font-size: 2rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+
+    button {
+        width: 22rem;
+        height: 3.8rem;
+        color: var(--white);
+        border-radius: 8px;
+        border: none;
+        background: var(--primary-color);
+    }
+}

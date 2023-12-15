@@ -1,0 +1,72 @@
+.table {
+    width: 100rem;
+
+    margin-left: 25rem;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+
+    font-size: 0.9em;
+    border-radius: 8px;
+    border-collapse: collapse;
+    box-shadow: 0.3rem 0.3rem 1.20rem 0.120rem var(--shadow-color-3);
+  }
+  
+  .table thead tr {
+    color: var(--primary-color);
+    text-align: left;
+  }
+  
+  .table th,
+  .table td {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .table tbody tr:nth-of-type(even) {
+    background-color: var(--grey-light-color-2);
+  }
+  
+  .th-btn {
+    display: flex;
+    margin-left: 54rem;
+  }
+  
+  .td-btn {
+    display: flex;
+    margin-left: 50rem;
+    gap: 1.5rem;
+  }
+  
+  .btn-1 {
+    width: 5rem;
+    height: 3.8rem;
+  
+    background: var(--primary-color);
+    color: var(--white);
+  
+    border-radius: 0.5rem;
+    border: none;
+  }
+  
+  .btn-2 {
+    width: 5rem;
+    height: 3.8rem;
+  
+    background: var(--danger-color);
+    color: var(--white);
+  
+    border-radius: 0.5rem;
+    border: none;
+  }
+  
+  .btn-create {
+    height: 3.8rem;
+    width: 22rem;
+    
+    margin-left: 1rem;
+    margin-top: 1rem;
+  
+    color: var(--white);
+    border-radius: 0.5rem;
+    background: var(--primary-color);
+    border: none;
+  }

@@ -1,0 +1,11 @@
+<ng-container *ngIf="toogleModal">
+  <div class="container">
+    <div class="container__title">
+      <h1>Tem certeza que deseja excluir o produto?</h1>
+    </div>
+    <div class="container__btn">
+      <button class="container__btn--left" (click)="deleteProduct()">Excluir</button>
+      <button class="container__btn--right" (click)="closeModal()">Cancel</button>
+    </div>
+  </div>
+</ng-container>

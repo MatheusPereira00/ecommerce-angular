@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <button class="btn-create" routerLink="subcategories/add">nova subcategoria</button>
+    <tr>
+      <th>Nome da categoria</th>
+      <th>Nome da subcategoria</th>
+      <th>id</th>
+      <th class="th-btn">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let subCategory of subCategories">
+      <td>{{ subCategory.nameCategory }}</td>
+      <td>{{ subCategory.nameSubCategory }}</td>
+      <td>{{ subCategory.id }}</td>
+
+      <td class="td-btn">
+        <button class="btn-1" [routerLink]="['subcategories/edit', subCategory.id]">
+          Editar
+        </button>
+        <button class="btn-2" (click)="openModal(subCategory.id)">Excluir</button>
+      </td>
+      <app-dialog-edit (close)="close()" (delet)="delet()"></app-dialog-edit>
+    </tr>
+  </tbody>
+</table>

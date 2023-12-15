@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    margin-left: 30rem;
+    margin-right: 10rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    h1 {
+        margin-left: 2rem;
+        color: #0052DD;
+        font-size: 2.8rem;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 52px;
+    }
+}
+
+.btn-create {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2.3rem;
+    width: 22rem;
+    height: 3.8rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+    color: var(--white);
+}

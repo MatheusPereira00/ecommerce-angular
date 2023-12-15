@@ -1,0 +1,25 @@
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  gap: 5px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+h2 {
+  color:var(--text-sidenav-footer-menu-item-color) ;
+}

@@ -1,0 +1,32 @@
+<div class="container" *ngIf="products">
+  <div class="container__card">
+    <div class="container__card--image">
+      <img src=" {{ products.imageUrl }} " alt="Book" />
+    </div>
+    <div class="container__card--body">
+      <p>Estoque: {{ products.unitsInStock }}</p>
+      <h1>
+        {{ products.name }}
+      </h1>
+      <div class="container__card--body__value">
+        <p>R${{ products.unitPrice }}</p>
+        <button (click)="changeStateModal(products.imageUrl, products)">
+          <svg class="icon-add">
+            <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-add"></use>
+          </svg>
+          <svg>
+            <use
+              xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="container__card--body__raiting">
+        <p>{{ products.rating }}</p>
+        <svg>
+          <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-star"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <app-dialog [image]="image" (close)="close()" />
+</div>

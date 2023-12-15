@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <button class="btn-create" routerLink="/adm/product/add">novo produto</button>
+    <tr>
+      <th>Nome do produto</th>
+      <th>id</th>
+      <th class="th-btn">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let products of products; let i = index">
+      <td>{{ products.name }}</td>
+      <td>{{ products.id }}</td>
+
+      <td class="td-btn">
+        <button class="btn-1" [routerLink]="['/adm/product/edit', products.id]">
+          Editar
+        </button>
+        <button class="btn-2" (click)="openModal(products.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+  <app-dialog-products (close)="close()" (delet)="delet()"></app-dialog-products>
+</table>

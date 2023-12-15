@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="container__title">
+    <svg>
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+    </svg>
+    <h1>Faça seu cadastro</h1>
+  </div>
+  <form class="container__form" [formGroup]="formCreate" onsubmit="postUser()">
+    <div class="container__form--left">
+      <label>Nome completo</label>
+      <input type="text" placeholder="insira seu nome aqui" formControlName="nome" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('nome')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>Nome social</label>
+      <input
+        type="text"
+        placeholder="insira seu nome social aqui"
+        formControlName="nomeSocial" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('nomeSocial')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>CPF</label>
+      <input type="text" placeholder="insira seu cpf aqui" formControlName="cpf" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('cpf')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>Data de nascimento</label>
+      <input
+        type="date"
+        placeholder="insira sua data de nascimento"
+        formControlName="dataNascimento" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('dataNascimento')!"
+        class="validators"></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--right">
+      <label>Email</label>
+      <input type="email" placeholder="insira seu email aqui" formControlName="email" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('email')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>Telefone</label>
+      <input
+        type="text"
+        placeholder="insira seu Telefone aqui"
+        formControlName="telefone" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('telefone')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>Senha</label>
+      <input type="text" placeholder="insira sua senha aqui" formControlName="senha" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('senha')!"
+        class="validators"></app-custom-validation-message>
+
+      <label>Confirmar senha</label>
+      <input
+        type="text"
+        placeholder="confirme sua senha aqui"
+        formControlName="confirmar" />
+      <app-custom-validation-message
+        [controlContainer]="formCreate.get('confirmar')!"
+        class="validators"></app-custom-validation-message>
+    </div>
+  </form>
+  <button (click)="postUser()">Finalizar cadastro</button>
+  <app-popup></app-popup>
+</div>

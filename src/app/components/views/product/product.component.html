@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="starter-template">
+    <h1>Você está vendo todos os produtos!</h1>
+    <div class="card-list">
+      <div *ngFor="let product of products">
+        <app-card [products]="product" (productTeste)="addToCart($event)"></app-card>
+      </div>
+    </div>
+  </div>
+</main>

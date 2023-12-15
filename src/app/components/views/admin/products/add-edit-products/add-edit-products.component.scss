@@ -1,0 +1,127 @@
+.one {
+    margin-top: 10rem;
+    margin-left: 25rem;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        p {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+    }
+    svg {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--primary-color);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    width: 98rem;
+    height: 80rem;
+    
+    margin-top: 4rem;
+    margin-left: 25rem;
+    margin-bottom: 10rem;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+
+    gap: -1rem;
+
+    &__form {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+
+        margin-top: 4rem;
+        margin-left: 2rem;
+
+        label {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        &--one {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                width: 20rem;
+                height: 3rem;
+                padding: 1rem;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
+            }
+
+            select {
+                width: 20rem;
+                height: 3rem;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
+            }
+        }
+    }
+
+    &__two {
+        display: flex;
+        flex-direction: column;
+
+        gap: 3rem;
+        margin-top: 4rem;
+        margin-left: 2rem;
+
+        label {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        &--two {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                width: 20rem;
+                height: 3rem;
+                padding-left: 1rem;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
+            }
+
+        }
+
+        &--tww {
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 1rem;
+            gap: 1rem;
+
+            input {
+                width: 40rem;
+                height: 23rem;
+                padding-left: 1rem;
+                border-radius: 0.8rem;
+                border: 1px solid var(--input-color);
+            }
+        }
+
+        button {
+            width: 22rem;
+            height: 3rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+    }
+}

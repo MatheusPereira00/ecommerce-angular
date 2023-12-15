@@ -1,0 +1,293 @@
+<form #f="ngForm" [formGroup]="cadastroForm" (ngSubmit)="(onSubmit)">
+  <div class="container"></div>
+</form>
+
+<h2>Checkout dos Produtos</h2>
+
+<form #f="ngForm" [formGroup]="cadastroForm" (ngSubmit)="(onSubmit)">
+  <div class="container">
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+
+      <p>Dados Pessoais</p>
+    </div>
+
+    <hr />
+
+    <div class="identificador">
+      <p>Já possui cadastro?</p>
+      <button>identifique-se</button>
+    </div>
+
+    <hr />
+
+    <div class="div-ee">
+      <label>Nome completo</label>
+      <input
+        id="name"
+        type="text"
+        placeholder=" insira seu nome aqui"
+        formControlName="name" />
+      <app-custom-validation-message
+        [controlContainer]="cadastroForm.get('name')!"></app-custom-validation-message>
+    </div>
+
+    <div class="div-ee">
+      <label>Email</label>
+      <input
+        id="email"
+        type="text"
+        placeholder=" insira seu email aqui"
+        formControlName="email" />
+      <app-custom-validation-message
+        [controlContainer]="cadastroForm.get('email')!"></app-custom-validation-message>
+    </div>
+
+    <div class="div-senha-confirmar">
+      <div class="div-ee">
+        <label for="senha">Senha</label>
+        <input
+          id="senha"
+          type="new-password"
+          placeholder="sua senha aqui"
+          formControlName="senha" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('senha')!"></app-custom-validation-message>
+      </div>
+
+      <div class="div-ee">
+        <label for="confirmar-senha">Confirmar senha</label>
+        <input
+          id="confirmar"
+          type="new-password"
+          placeholder="sua senha aqui"
+          formControlName="confirmar" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('confirmar')!
+          "></app-custom-validation-message>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="cpf-rg">
+      <div class="div-ee">
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="" placeholder="000.000.000-00" formControlName="cpf" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('cpf')!"></app-custom-validation-message>
+      </div>
+
+      <div class="div-ee">
+        <label for="rg">RG</label>
+        <input type="" name="" id="rg" placeholder="00.000.000-0" formControlName="rg" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('rg')!"></app-custom-validation-message>
+      </div>
+    </div>
+
+    <div class="data-tel">
+      <div class="div-ee">
+        <label for="data">Data</label>
+        <input type="date" name="" id="data" formControlName="data" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('data')!"></app-custom-validation-message>
+      </div>
+
+      <div class="div-ee">
+        <label for="tel">Celular</label>
+        <input
+          id="tel"
+          type="tel"
+          placeholder="(00) 00000-0000"
+          formControlName="celular" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('celular')!
+          "></app-custom-validation-message>
+      </div>
+    </div>
+
+    <div class="txt-radio">
+      <div class="txt">
+        <p>Deseja receber notificações por email ou whatsapp?</p>
+      </div>
+
+      <div class="radioo">
+        <input type="radio" id="radioo" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+      <p>Escolha a forma de envio</p>
+    </div>
+
+    <hr />
+
+    <div class="cep">
+      <label for="cep">CEP</label>
+      <input id="cep" placeholder="00000-000" formControlName="cep" (keyup)="getCep()" />
+      <app-custom-validation-message
+        [controlContainer]="cadastroForm.get('cep')!"></app-custom-validation-message>
+    </div>
+
+    <div class="div-radio">
+      <div class="div-radioi">
+        <input type="radio" name="" id="radioi" />
+        Retirar na loja fisica | 1 dia
+      </div>
+      <div class="div-radioa">
+        <input type="radio" name="" id="radioa" />
+        PAC | 3 dias
+      </div>
+    </div>
+
+    <div class="uteis">
+      <section>*</section>
+      Dias uteis, após a confirmação do pagamento
+    </div>
+
+    <div class="ende-num">
+      <div class="endereco">
+        <label for="endereço">Endereço</label>
+        <input
+          type="text"
+          name=""
+          id="endereco"
+          placeholder="Rua matheusers"
+          formControlName="endereco" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('endereco')!
+          "></app-custom-validation-message>
+      </div>
+
+      <div class="num">
+        <label for="num">Numero</label>
+        <input id="num" placeholder="000" formControlName="num" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('num')!"></app-custom-validation-message>
+      </div>
+    </div>
+
+    <div class="comple-refe">
+      <div class="comple">
+        <label for="comple">Complemento</label>
+        <input id="comple" type="text" placeholder="apto xxxx" formControlName="comple" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('comple')!
+          "></app-custom-validation-message>
+      </div>
+      <div class="refe">
+        <label for="refe">Referencia</label>
+        <input
+          id="refe"
+          type="text"
+          placeholder="perto da avenida..."
+          formControlName="refe" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('refe')!"></app-custom-validation-message>
+      </div>
+    </div>
+
+    <div class="bairro-city">
+      <div class="bairro">
+        <label for="bairro">Bairro</label>
+        <input
+          id="bairro"
+          type="text"
+          placeholder="Bairro aqui"
+          formControlName="bairro" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('bairro')!
+          "></app-custom-validation-message>
+      </div>
+      <div class="city">
+        <label for="city">Cidade</label>
+        <input id="city" type="text" placeholder="Cidade aqui" formControlName="cidade" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('cidade')!
+          "></app-custom-validation-message>
+      </div>
+    </div>
+
+    <div class="estado-pais">
+      <div class="estado">
+        <label for="estado">Estado</label>
+        <input id="estado" placeholder="Estado aqui" formControlName="estado" />
+        <app-custom-validation-message
+          [controlContainer]="
+            cadastroForm.get('estado')!
+          "></app-custom-validation-message>
+      </div>
+      <div class="pais">
+        <label for="pais">Pais</label>
+        <input id="pais" type="text" placeholder="Brasil" formControlName="pais" />
+        <app-custom-validation-message
+          [controlContainer]="cadastroForm.get('pais')!"></app-custom-validation-message>
+      </div>
+    </div>
+  </div>
+
+  <div class="container nn">
+    <div class="icon-pessoa">
+      <svg class="icon icon-person">
+        <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+      </svg>
+      <p>Escolha a forma de pagamento</p>
+    </div>
+
+    <hr />
+
+    <div class="radio-boleto">
+      display flex e aligns items
+      <input type="radio" name="" id="input-radio" placeholder="" />
+      <div class="boleto-total">
+        <p>Boleto</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
+    </div>
+
+    <div class="radio-pix">
+      display flex e aligns items
+      <input type="radio" name="" id="input-pix" placeholder="" />
+      <div class="pix-total">
+        <p>Pix</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
+    </div>
+
+    <div class="radio-credito">
+      display flex e aligns items
+      <input type="radio" name="" id="input-credito" placeholder="" />
+      <div class="credito-total">
+        <p>Credito</p>
+        <p>Valor Total R$ 18,90</p>
+      </div>
+    </div>
+
+    <div class="div-btn">
+      <button class="btn-fim" (click)="onSubmit()">Finalizar compra</button>
+    </div>
+  </div>
+</form>
+
+<div
+  class="div-valid"
+  *ngIf="
+    cadastroForm.get('confirmar')?.invalid &&
+    (cadastroForm.get('confirmar')?.touched || cadastroForm.get('confirmar')?.dirty)
+  ">
+  O campo é obrigatorio
+</div>

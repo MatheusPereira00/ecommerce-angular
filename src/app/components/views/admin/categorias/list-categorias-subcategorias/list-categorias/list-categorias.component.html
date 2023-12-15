@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <button class="btn-create" routerLink="add">nova categoria</button>
+    <tr>
+      <th>Nome da categoria</th>
+      <th>id</th>
+      <th class="th-btn">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let category of categories; let i = index">
+      <td>{{ category.name }}</td>
+      <td>{{ category.id }}</td>
+
+      <td class="td-btn">
+        <button class="btn-1" [routerLink]="['edit', category.id]">Editar</button>
+        <button class="btn-2" (click)="openModal(category.id)">Excluir</button>
+      </td>
+      <app-dialog-edit (close)="close()" (delet)="delet()"></app-dialog-edit>
+    </tr>
+  </tbody>
+</table>

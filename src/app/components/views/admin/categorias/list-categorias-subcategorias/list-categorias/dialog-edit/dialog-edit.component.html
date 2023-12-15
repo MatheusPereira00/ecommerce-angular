@@ -1,0 +1,23 @@
+<ng-container *ngIf="toogleModal">
+  <div class="container">
+    <h1>Tem certeza que deseja excluir?</h1>
+
+    <div class="container__btn">
+      <button
+        class="container__btn--left"
+        data-dismiss="modal"
+        aria-label="Fechar"
+        (click)="deleteCategory()">
+        Excluir
+      </button>
+
+      <button
+        class="container__btn--right"
+        data-dismiss="modal"
+        aria-label="Fechar"
+        (click)="closeModal()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</ng-container>

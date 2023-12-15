@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    gap: 1rem;
+    z-index: 11;
+    background: var(--white);
+    box-shadow: var(--shadow-dark);
+    border-radius: 8px;
+    width: 40%;
+    height: 20%;
+    max-height: 90vh;
+    overflow: none;
+
+    &__title {
+        display: flex;
+        justify-content: center;   
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+
+        gap: 1rem;
+        button {
+            width: 5rem;
+            height: 3.8rem;
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+        }
+
+        &--left {
+            background-color: var(--primary-color);
+        }
+
+        &--right {
+            background: var(--danger-color); 
+        }
+    }
+}

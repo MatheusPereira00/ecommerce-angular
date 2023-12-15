@@ -1,0 +1,98 @@
+<div class="one">
+  <div class="one__left">
+    <svg class="icon icon-reply" routerLink="/adm/products">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-reply"></use>
+    </svg>
+    <p>Voltar para administrar os produtos</p>
+  </div>
+  <div class="one__left">
+    <svg class="icon icon-gift">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-gift"></use>
+    </svg>
+    <h1>Voce esta editando o Produto XYL</h1>
+  </div>
+</div>
+
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="container__form">
+    <div class="container__form--one">
+      <label>Nome do produto:</label>
+      <input type="text" placeholder="PRODUTO" formControlName="name" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('name')!"></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--one">
+      <label>SKU</label>
+      <input type="text" placeholder="SKU" formControlName="sku" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('sku')!"></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--one">
+      <label>Preço unitario</label>
+      <input type="text" placeholder="PRICE" formControlName="unitPrice" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('unitPrice')!"></app-custom-validation-message>
+    </div>
+  </div>
+
+  <div class="container__form">
+    <div class="container__form--one">
+      <label>Nome da categoria</label>
+      <select formControlName="category_name">
+        <option *ngFor="let category of categories">{{ category.name }}</option>
+      </select>
+      <app-custom-validation-message
+        [controlContainer]="form.get('category_name')!"></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--one">
+      <label>SubCategoria do produto</label>
+      <select formControlName="subcategory_name">
+        <option *ngFor="let subCategory of subCategories">
+          {{ subCategory.nameSubCategory }}
+        </option>
+      </select>
+      <app-custom-validation-message
+        [controlContainer]="
+          form.get('subcategory_name')!
+        "></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--one">
+      <label>Status do produto</label>
+      <select formControlName="active">
+        <option>true</option>
+        <option>false</option>
+      </select>
+      <app-custom-validation-message
+        [controlContainer]="form.get('active')!"></app-custom-validation-message>
+    </div>
+
+    <div class="container__form--one">
+      <label>Estoque Produto</label>
+      <input type="number" placeholder="ESTOQUE" formControlName="unitsInStock" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('unitsInStock')!"></app-custom-validation-message>
+    </div>
+  </div>
+
+  <div class="container__two">
+    <div class="container__two--two">
+      <label>Imagem do Produto</label>
+      <input type="text" placeholder="INSERIR URL" formControlName="urlImagem" />
+      <app-custom-validation-message
+        [controlContainer]="form.get('urlImagem')!"></app-custom-validation-message>
+    </div>
+
+    <div class="container__two--tww">
+      <label>Descrição do Produto</label>
+      <input
+        type="text"
+        placeholder="INSERIR BREVE DESCRIÇÃO AQUI"
+        formControlName="descrição" />
+    </div>
+    <button type="submit" [disabled]="form.invalid">Salvar edição</button>
+  </div>
+</form>

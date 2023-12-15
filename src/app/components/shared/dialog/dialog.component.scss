@@ -1,0 +1,62 @@
+@import '../../../styles/base';
+.dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    gap: 1rem;
+    z-index: 11;
+    background: var(--body);
+    box-shadow: var(--shadow-dark);
+    border-radius: 8px;
+    width: 40%;
+    height: 50%;
+    max-height: 90vh;
+    overflow: none;
+}
+h1 {
+    color: var(--black-white);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--black);
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+img {
+    max-width: 200px;
+}
+
+.imgDiv {
+    display: flex;
+    justify-content: center;
+}
+.div-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 20px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0052dd;
+    color: white;
+    height: 30px;
+    width: 60px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+.dialog__title {
+    display: flex;
+    justify-content: center;
+    
+}

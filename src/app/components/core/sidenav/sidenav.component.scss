@@ -1,0 +1,50 @@
+.container {
+  width: 20rem;
+  height: 100%;
+
+  padding-top: 10rem;
+  padding-left: 2rem;
+
+  position: fixed;
+
+  background: var(--primary-color);
+
+  &__sidenav {
+
+    ul {
+      list-style-type: none;
+    
+      display: flex;
+      flex-direction: column;
+
+      li {
+        width: 23rem;
+        height: 4rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        gap: 1rem;
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+
+          fill: var(--white);
+        }
+
+        p {
+          color: var(--white);
+
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1.8rem;
+
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

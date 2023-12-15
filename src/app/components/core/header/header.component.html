@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="container__logo" routerLink="">
+    <svg>
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-menu"></use>
+    </svg>
+
+    <h1>matheus<span> Shop </span></h1>
+  </div>
+
+  <div class="container__search">
+    <app-search></app-search>
+  </div>
+
+  <div class="container__icons">
+    <svg routerLink="/cart">
+      <use
+        xlink:href="\assets\images\products\icons-svg\icons.svg#icon-local_grocery_store"></use>
+    </svg>
+
+    {{ cartService.checkLength() }}
+
+    <svg style="width: 1.7rem; fill: red">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-bell"></use>
+    </svg>
+
+    <svg routerLink="account/login">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-person"></use>
+    </svg>
+    
+    <svg routerLink="account/logout">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-enter"></use>
+    </svg>
+
+    <svg>
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-world"></use>
+    </svg>
+
+    <input
+      id="switch-shadow"
+      class="switch switch--shadow"
+      type="checkbox"
+      (click)="onThemeSwitchChange()" />
+    <label for="switch-shadow"></label>
+  </div>
+</div>

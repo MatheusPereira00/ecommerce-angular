@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="container__p">
+    <svg class="icon icon-reply" routerLink="/adm/categories">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-reply"></use>
+    </svg>
+    <p>Voltar para administar categorias e subacategorias</p>
+  </div>
+
+  <div class="container__h1">
+    <svg class="icon icon-price-tag">
+      <use xlink:href="\assets\images\products\icons-svg\icons.svg#icon-price-tag"></use>
+    </svg>
+    <h1>Voce esta criando uma nova categoria</h1>
+  </div>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>Nome da categoria</label>
+  <input type="text" formControlName="name" />
+  <button type="submit">Salvar categoria</button>
+</form>

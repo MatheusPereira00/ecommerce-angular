@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  margin-left: 25rem;
+
+  h1 {
+    color: var(--primary-color-blue-white);
+
+    font-size: 35px;
+    font-weight: 400;
+
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;;
+}
