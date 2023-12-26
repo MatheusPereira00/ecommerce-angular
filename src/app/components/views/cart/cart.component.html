@@ -3,7 +3,6 @@
     <div class="container__card--img">
       <img src="{{ cart.imageUrl }}" alt="" />
     </div>
-
     <div class="container__card--dados">
       <div class="container__card--dados__name">
         <h1>
@@ -26,12 +25,10 @@
       <button>{{ cart.quantity }}</button>
       <button (click)="cartService.increase(cart)">+</button>
     </div>
-
     <div class="container__card--total">
       <h1>Total</h1>
       <h2>R${{ cart.unitPrice * cart.quantity }}</h2>
     </div>
-
     <div class="container__card--excluir">
       <button (click)="cartService.removeProduct(cart)">X</button>
     </div>
